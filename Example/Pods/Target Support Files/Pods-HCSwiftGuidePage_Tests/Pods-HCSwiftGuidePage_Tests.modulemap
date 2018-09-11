@@ -1,0 +1,6 @@
+framework module Pods_HCSwiftGuidePage_Tests {
+  umbrella header "Pods-HCSwiftGuidePage_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

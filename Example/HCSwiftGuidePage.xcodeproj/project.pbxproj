@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11826BF522A4DDB62DAC7935 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		11826BF522A4DDB62DAC7935 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		42038E720654D5F430345F7B /* Pods_HCSwiftGuidePage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCSwiftGuidePage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B58F2F5E3A96D9624345F /* Pods-HCSwiftGuidePage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCSwiftGuidePage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCSwiftGuidePage_Example/Pods-HCSwiftGuidePage_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4F58ED0D69B1B2E4C3E99A2F /* HCSwiftGuidePage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HCSwiftGuidePage.podspec; path = ../HCSwiftGuidePage.podspec; sourceTree = "<group>"; };
+		4F58ED0D69B1B2E4C3E99A2F /* HCSwiftGuidePage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HCSwiftGuidePage.podspec; path = ../HCSwiftGuidePage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		550750F857521BBC90ACD0B1 /* Pods-HCSwiftGuidePage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCSwiftGuidePage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCSwiftGuidePage_Tests/Pods-HCSwiftGuidePage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* HCSwiftGuidePage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCSwiftGuidePage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		7092809F02820E80C2E4A4DC /* Pods_HCSwiftGuidePage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCSwiftGuidePage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18BFEB01A6EEC2D434CC97E /* Pods-HCSwiftGuidePage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCSwiftGuidePage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCSwiftGuidePage_Example/Pods-HCSwiftGuidePage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9D9699868A2BC1020480467 /* Pods-HCSwiftGuidePage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCSwiftGuidePage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCSwiftGuidePage_Tests/Pods-HCSwiftGuidePage_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F07CBA39F350ADF3F2254515 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F07CBA39F350ADF3F2254515 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

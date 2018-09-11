@@ -1,0 +1,6 @@
+framework module HCSwiftGuidePage {
+  umbrella header "HCSwiftGuidePage-umbrella.h"
+
+  export *
+  module * { export * }
+}
