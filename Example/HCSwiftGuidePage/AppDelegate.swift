@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import HCSwiftGuidePage
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let guidePageVC = HCGuidePageViewController(imagesArray: ["lead01","lead02","lead03"], customLayout: nil)
+        guidePageVC.skipAction = {[weak self] in
+            let viewController = ViewController()
+//            self.window?.rootViewController = viewController
+//            self.window?.makeKeyAndVisible()
+            self?.window?.rootViewController?.modalTransitionStyle = .crossDissolve
+            
+            UIView.transition(with: (self?.window!)!, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+                let oldState = UIView.areAnimationsEnabled
+                UIView.setAnimationsEnabled(false)
+                self?.window!.rootViewController = viewController
+                UIView.setAnimationsEnabled(oldState)
+            }, completion: nil)
+        }
+        window!.rootViewController = guidePageVC
+        window!.makeKeyAndVisible()
         return true
     }
 
