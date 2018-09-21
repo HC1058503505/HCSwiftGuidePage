@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08711C8421548B7200295E3A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08711C8321548B7200295E3A /* Tools.swift */; };
+		08711C862154AD3600295E3A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08711C852154AD3600295E3A /* Tools.swift */; };
 		0973E08E165641182E8A492BC256DE3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1983CE658ECC641889E9C801E7DE3EA0 /* HCSwiftGuidePage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615A217E03477CC4EF66DE3E427216B /* HCSwiftGuidePage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BA7E92BE54D2ECCAC6B91F2906773D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08711C8321548B7200295E3A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		08711C852154AD3600295E3A /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tools.swift; path = HCSwiftGuidePage/Classes/Tools.swift; sourceTree = "<group>"; };
 		0AE15A96A3041E978D9306219EF1C60F /* Pods-HCSwiftGuidePage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HCSwiftGuidePage_Tests.modulemap"; sourceTree = "<group>"; };
 		403D93F159AD59FB8DAFC2A9C4385345 /* Pods-HCSwiftGuidePage_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HCSwiftGuidePage_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		416C85BF975162DDEBF2A3562AD768D0 /* Pods-HCSwiftGuidePage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HCSwiftGuidePage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		0E781231B1A4AD846E8D1C9C488443ED /* HCSwiftGuidePage */ = {
 			isa = PBXGroup;
 			children = (
-				08711C8321548B7200295E3A /* Tools.swift */,
+				08711C852154AD3600295E3A /* Tools.swift */,
 				C68EA87824BB3B0F4ADB0B37693EDBDD /* HCGuidePageView.swift */,
 				D45A8D690DAA1E88536417DBC6BD33C9 /* HCImagesCollectionViewCell.swift */,
 				7C693DD97DE31703B6ED701EF6F2F063 /* Pod */,
@@ -360,7 +360,7 @@
 				A7BDC497C33EEFBD261BE00CC1820DA2 /* HCGuidePageView.swift in Sources */,
 				8A91239199D32035CE3DD6A4B2EB996F /* HCImagesCollectionViewCell.swift in Sources */,
 				A403D893E2BDC7991D310A0BA1E3F04E /* HCSwiftGuidePage-dummy.m in Sources */,
-				08711C8421548B7200295E3A /* Tools.swift in Sources */,
+				08711C862154AD3600295E3A /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
