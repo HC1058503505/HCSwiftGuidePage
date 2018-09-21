@@ -17,11 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
     
-        let view = HCGuidePageView(imagesArray: ["lead01","lead02","lead03"], canSkip: true)
-        view.configureSkipButton { (btn) in
-            btn.setTitleColor(UIColor.cyan, for: .normal)
-        }
-        
+        let view = HCGuidePageView(imagesArray: ["lead01","lead02","lead03","lead01","lead03","lead02"], canSkip: true)
+        view.configureSkipButton()
         view.configureExpreienceButton { (btn) in
             btn.setTitle("立即体验", for: .normal)
         }

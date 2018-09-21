@@ -8,17 +8,17 @@
 import UIKit
 
 public class HCGuidePageView: UIView {
-
     
-    private var imagesArray:[String] = [String]()
     
-    private var canSkip: Bool = true
+    fileprivate var imagesArray:[String] = [String]()
     
-    private let pageControl = UIPageControl()
+    fileprivate var canSkip: Bool = true
     
-    private let skipBtn = UIButton(type: .custom)
+    fileprivate let pageControl = UIPageControl()
     
-    private lazy var expreienceBtn: UIButton = {
+    fileprivate let skipBtn = UIButton(type: .custom)
+    
+    fileprivate lazy var expreienceBtn: UIButton = {
         let btn = UIButton(type: .custom)
         btn.backgroundColor = UIColor.cyan
         btn.layer.cornerRadius = 20
@@ -42,14 +42,14 @@ public class HCGuidePageView: UIView {
         setupPageControl()
     }
     
-
+    
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-   private func flowLayout() -> UICollectionViewLayout {
+    fileprivate func flowLayout() -> UICollectionViewLayout {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = UIScreen.main.bounds.size
         flowLayout.scrollDirection = .horizontal
@@ -58,8 +58,8 @@ public class HCGuidePageView: UIView {
         return flowLayout
     }
     
-   private func setupCollectionView() {
-    
+    fileprivate func setupCollectionView() {
+        
         let collectionView = UICollectionView(frame: bounds, collectionViewLayout: flowLayout())
         collectionView.bounces = false
         collectionView.isPagingEnabled = true
@@ -70,8 +70,8 @@ public class HCGuidePageView: UIView {
         collectionView.register(HCImagesCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     }
     
-   private func setupSkipBtn() {
-    
+    fileprivate func setupSkipBtn() {
+        
         skipBtn.setTitle("Skip", for: .normal)
         skipBtn.backgroundColor = UIColor.white
         skipBtn.setTitleColor(UIColor.orange, for: .normal)
@@ -85,11 +85,11 @@ public class HCGuidePageView: UIView {
         skipBtn.topAnchor.constraint(equalTo: topAnchor, constant: 50).isActive = true
         skipBtn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         skipBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-    
+        
         skipBtn.addTarget(self, action: #selector(HCGuidePageView.skipBtnAction), for: .touchUpInside)
     }
     
-    @objc private func skipBtnAction() {
+    @objc fileprivate func skipBtnAction() {
         UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.alpha = 0
         }) { _ in
@@ -97,8 +97,8 @@ public class HCGuidePageView: UIView {
         }
     }
     
-    private func setupPageControl() {
-
+    fileprivate func setupPageControl() {
+        
         pageControl.numberOfPages = imagesArray.count
         addSubview(pageControl)
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -107,17 +107,23 @@ public class HCGuidePageView: UIView {
     }
     
     
-    public func configureSkipButton(skip: (UIButton)->()) {
+    public func configureSkipButton(skip: ((UIButton)->())? = nil) {
+        guard let skipBlock = skip else { return }
         if !canSkip {
             return
         }
-        skip(skipBtn)
+        skipBlock(skipBtn)
     }
-
-    public func configureExpreienceButton(expreience: (UIButton)->()) {
-        expreience(expreienceBtn)
+    
+    public func configureExpreienceButton(expreience: ((UIButton)->())? = nil) {
+        guard let expreienceBlock = expreience else { return }
+        expreienceBlock(expreienceBtn)
     }
-
+    
+    public func configurePageControl(pageCtrl: ((UIPageControl)->())? = nil) {
+        guard let pageCtrlBlock = pageCtrl else { return }
+        pageCtrlBlock(pageControl)
+    }
     deinit {
         
         HCPrint("HCGuidePageViewController----deinit")
@@ -138,9 +144,10 @@ extension HCGuidePageView: UICollectionViewDelegate, UICollectionViewDataSource 
     }
     
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
+        
         if indexPath.row == imagesArray.count - 1 {
-            DispatchQueue.once(token: "ImmediatelyExpreience") {
+            if !(cell.subviews.last?.isKind(of: UIButton.self) ?? false) {
+                
                 cell.addSubview(self.expreienceBtn)
                 
                 self.expreienceBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -148,6 +155,11 @@ extension HCGuidePageView: UICollectionViewDelegate, UICollectionViewDataSource 
                 self.expreienceBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
                 self.expreienceBtn.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
                 self.expreienceBtn.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -60).isActive = true
+            }
+            
+        } else {
+            if cell.subviews.last?.isKind(of: UIButton.self) ?? false {
+                cell.subviews.last?.removeFromSuperview()
             }
         }
         
